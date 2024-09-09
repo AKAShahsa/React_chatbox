@@ -1,0 +1,15 @@
+/* Define the keyframes for the color change */
+@keyframes rgbAnimation {
+  0% { color: red; text-shadow: 0 0 10px red; }
+  25% { color: green; text-shadow: 0 0 10px green; }
+  50% { color: blue; text-shadow: 0 0 10px blue; }
+  75% { color: yellow; text-shadow: 0 0 10px yellow; }
+  100% { color: red; text-shadow: 0 0 10px red; }
+}
+
+/* Apply the animation to the element */
+.music {
+  font-size: 2rem; /* Adjust font size as needed */
+  font-weight: bold;
+  animation: rgbAnimation 5s linear infinite; /* Adjust timing as needed */
+}

@@ -1,0 +1,24 @@
+{
+  "users": {
+    "userID1": {
+      "username": "john_doe",
+      "email": "john@example.com",
+      "profilePicture": "path/to/profilePicture.jpg"
+    },
+    "userID2": {
+      "username": "jane_doe",
+      "email": "jane@example.com",
+      "profilePicture": "path/to/profilePicture.jpg"
+    }
+  },
+  "presence": {
+    "userID1": {
+      "online": true,
+      "lastOnline": 1692847392
+    },
+    "userID2": {
+      "online": false,
+      "lastOnline": 1692847300
+    }
+  }
+}

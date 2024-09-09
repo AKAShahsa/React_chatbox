@@ -1,0 +1,150 @@
+/* Dark Themed Background */
+/* Beautiful Dark Themed Background */
+/* Beautiful Dark Themed Background */
+.mainDiv {
+  background: linear-gradient(135deg, #461212, #43084b, #380202);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+
+  overflow: hidden;
+  position: relative; /* Ensures that ::before is positioned relative to the body */
+}
+.inputMesg{
+  min-height: 10px;
+}
+.ai-message-style {
+  background-color: #f0f0f0; /* Light grey background for AI messages */
+
+  color: #333;               /* Darker text color */
+  font-size: 0.6rem;
+  
+  
+}
+
+/* Overlay texture for added depth */
+.mainDiv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 60%);
+  opacity: 0.4;
+  pointer-events: none;
+}
+.online-last-seen{
+  font-size:1rem;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+.divider{
+  width: 100%;
+  height: 2px;
+  color:white;
+}
+.congrats {
+    color: rgb(105, 209, 7);
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .confetti-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    display: none;
+  }
+  
+  .confetti-animation.show {
+    display: block;
+    background-image: url('img/confetti.gif'); /* Replace with your GIF URL */
+    background-size:auto;
+    border: 50%;
+    /* mix-blend-mode:screen; */
+    background-position: center;
+    background-repeat: repeat;
+    animation: confetti 7s ease-in-out forwards;
+    
+    /* border-radius: 50%; */
+    
+  }
+
+  .mesgDiv{
+    max-width: 80%;
+  }
+  @keyframes confetti {
+    0% {
+      opacity: 0.5;
+      /* transform: translateY(-100vh); */
+      /* filter: brightness(0) , saturate(2); */
+    }
+    100% {
+      /* filter: brightness(1); */
+      /* transform: translateY(180vh); */
+      opacity: 1;
+    }
+  }
+  
+  /* Ensure full width on smaller screens for the sidebar */
+@media (max-width: 768px) {
+  .offcanvas {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+  .online-last-seen{
+    font-size:0.6rem;
+  }
+  .mesgDiv{
+    max-width: 100%;
+  }
+  .offcanvas.show {
+    transform: translateX(0);
+  }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .chat-window {
+    height: calc(100vh - 50px); /* Adjust based on header height */
+  }
+}
+
+/* Ensure proper layout on larger screens */
+@media (min-width: 769px) {
+  .chatbox {
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+  }
+
+  .sidebar {
+    width: 25%;
+    min-width: 250px; /* Minimum width for the sidebar */
+  }
+
+  .chat-content {
+    flex: 1;
+  }
+}
+
+  /* Add more styles for confetti particles if needed */
+  

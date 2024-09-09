@@ -1,0 +1,24 @@
+.screen-sharing-component {
+    position: relative;
+  }
+  
+  .streaming-toggle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .streaming-options {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .screen-stream video {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  
